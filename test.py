@@ -28,7 +28,7 @@ class TestFedEx(TestCase):
 
     def test_tracking(self):
         tracking_number = "702395541585"
-        response = self.fedex.tracking(tracking_number)
+        response = self.fedex.track_by_tracking_number(tracking_number)
         self.assertEqual(response["output"]["completeTrackResults"][0]["trackingNumber"], tracking_number)
         
 if __name__ == "__main__":

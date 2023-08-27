@@ -1,29 +1,25 @@
-# KeyDelivery API Python Client
+# FedEx Tracking API Python Client
 
-This is a Python client for the KeyDelivery API. It is a wrapper around the [KeyDelivery](https://kd100.com/) API, which allows you to track your shipments.
+This is a Python client for the [FedEx Tracking API](https://developer.fedex.com/api/en-at/catalog/track/v1/docs.html).
 
-It is not fully featured yet, but it is a good starting point.
+It is not fully featured yet, but it is a good starting point. It requires you to have a FedEx developer account and an API key.
 
 ## Installation
 
 ```bash
-pip install git+https://kumig.it/kumitterer/pykeydelivery
+pip install git+https://kumig.it/kumitterer/fedextrack.git
 ```
 
 ## Usage
 
 ```python
-from keydelivery import KeyDelivery
+from fedextrack import FedEx
 
-api = KeyDelivery("YOUR_API_KEY", "YOUR_API_SECRET")
-
-# Find carrier by shipment number
-
-carrier_options = api.detect_carrier("YOUR_SHIPMENT_NUMBER")
+api = FedEx("YOUR_API_KEY", "YOUR_API_SECRET")
 
 # Realtime tracking
 
-tracking = api.realtime("CARRIER_CODE", "YOUR_SHIPMENT_NUMBER")
+tracking = api.tracking("YOUR_SHIPMENT_NUMBER")
 ```
 
 ## License

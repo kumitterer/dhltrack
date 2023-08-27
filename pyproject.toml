@@ -3,12 +3,12 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pykeydelivery"
+name = "fedextrack"
 version = "0.9.0"
 authors = [
-  { name="Kumi Mitterer", email="pykeydelivery@kumi.email" },
+  { name="Kumi Mitterer", email="fedextrack@kumi.email" },
 ]
-description = "Simple Python wrapper to fetch data from KeyDelivery (kd100.com)"
+description = "Simple Python wrapper to fetch data from FedEx Tracking API"
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.10"
@@ -19,5 +19,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://kumig.it/kumitterer/pykeydelivery"
-"Bug Tracker" = "https://kumig.it/kumitterer/pykeydelivery/issues"
+"Homepage" = "https://kumig.it/kumitterer/fedextrack"
+"Bug Tracker" = "https://kumig.it/kumitterer/fedextrack/issues"

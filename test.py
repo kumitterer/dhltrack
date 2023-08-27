@@ -3,7 +3,7 @@ from configparser import ConfigParser
 
 import json
 
-from pykeydelivery import *
+from fedextrack import *
 
 class TestHTTPRequest(TestCase):
     def test_http_request(self):
@@ -19,20 +19,17 @@ class TestHTTPRequest(TestCase):
         self.assertEqual(response["headers"]["Content-Type"], "application/json")
         self.assertEqual(response["json"]["foo"], "bar")
 
-class TestKeyDelivery(TestCase):
+class TestFedEx(TestCase):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.config = ConfigParser()
         self.config.read("config.ini")
-        self.keydelivery = KeyDelivery.from_config(self.config)
+        self.fedex = FedEx.from_config(self.config)
 
-    def test_detect_carrier(self):
-        response = self.keydelivery.detect_carrier("483432314669")
-        self.assertEqual(response["code"], 200)
-
-    def test_realtime(self):
-        response = self.keydelivery.realtime("gls", "483432314669")
-        self.assertEqual(response["code"], 200)
+    def test_tracking(self):
+        tracking_number = "702395541585"
+        response = self.fedex.tracking(tracking_number)
+        self.assertEqual(response["output"]["completeTrackResults"][0]["trackingNumber"], tracking_number)
         
 if __name__ == "__main__":
     main()

@@ -7,7 +7,7 @@ It is not fully featured yet, but it is a good starting point. It requires you t
 ## Installation
 
 ```bash
-pip install git+https://kumig.it/kumitterer/fedextrack.git
+pip install fedextrack
 ```
 
 ## Usage

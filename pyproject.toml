@@ -3,12 +3,12 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "fedextrack"
+name = "dhltrack"
 version = "0.9.0"
 authors = [
-  { name="Kumi Mitterer", email="fedextrack@kumi.email" },
+  { name="Kumi Mitterer", email="dhltrack@kumi.email" },
 ]
-description = "Simple Python wrapper to fetch data from FedEx Tracking API"
+description = "Simple Python wrapper to fetch data from DHL Tracking API"
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.10"
@@ -19,5 +19,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://kumig.it/kumitterer/fedextrack"
-"Bug Tracker" = "https://kumig.it/kumitterer/fedextrack/issues"
+"Homepage" = "https://kumig.it/kumitterer/dhltrack"
+"Bug Tracker" = "https://kumig.it/kumitterer/dhltrack/issues"

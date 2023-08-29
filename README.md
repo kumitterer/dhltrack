@@ -1,25 +1,25 @@
-# FedEx Tracking API Python Client
+# DHL Tracking API Python Client
 
-This is a Python client for the [FedEx Tracking API](https://developer.fedex.com/api/en-at/catalog/track/v1/docs.html).
+This is a Python client for the [DHL Shipment Tracking Unified API](https://developer.dhl.com/api-reference/shipment-tracking).
 
-It is not fully featured yet, but it is a good starting point. It requires you to have a FedEx developer account and an API key.
+It is not fully featured yet, but it is a good starting point. It requires you to have a DHL developer account and an API key.
 
 ## Installation
 
 ```bash
-pip install fedextrack
+pip install dhltrack
 ```
 
 ## Usage
 
 ```python
-from fedextrack import FedEx
+from dhltrack import DHL
 
-api = FedEx("YOUR_API_KEY", "YOUR_API_SECRET")
+api = DHL("YOUR_API_KEY", "YOUR_API_SECRET")
 
 # Realtime tracking
 
-tracking = api.tracking("YOUR_SHIPMENT_NUMBER")
+tracking = api.track("YOUR_SHIPMENT_NUMBER")
 ```
 
 ## License
